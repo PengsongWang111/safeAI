@@ -60,3 +60,18 @@ footer {
     color: #ecf0f1;
     padding: 30px 0;
 }
+/* 学术蓝专属背景 - 强制覆盖版 */
+.bg-academic-blue {
+    background-color: #003366 !important; /* 经典的深海军蓝 */
+    color: #ffffff !important;
+}
+
+/* 导航栏链接在深蓝底色下的文字颜色 */
+.bg-academic-blue .nav-link {
+    color: rgba(255,255,255,0.8) !important;
+}
+
+.bg-academic-blue .nav-link.active, 
+.bg-academic-blue .nav-link:hover {
+    color: #ffffff !important;
+}
