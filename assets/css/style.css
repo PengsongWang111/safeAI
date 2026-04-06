@@ -2,19 +2,28 @@
 body {
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     color: #333;
-    padding-top: 76px; /* 为顶部固定导航栏留出空间 */
+    padding-top: 76px; 
 }
 
-/* 顶部导航栏 */
+/* --- 核心修改：学术蓝全局定义 --- */
+:root {
+    --academic-blue: #003366; /* 在这里定义一次，全站生效 */
+}
+
+/* 顶部导航栏 - 直接修改原有类 */
 .navbar {
-    background-color: #1a252f;
+    background-color: var(--academic-blue) !important; /* 强制使用学术蓝 */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
 .navbar-brand, .nav-link {
     color: #ffffff !important;
 }
+
 .nav-link:hover {
     color: #3498db !important;
+    background-color: rgba(255,255,255,0.1); /* 增加一个微弱的悬停背景感 */
+    border-radius: 4px;
 }
 
 /* 头部大图区域 (Hero) */
@@ -22,10 +31,6 @@ body {
     background-color: #f8f9fa;
     padding: 80px 0;
     border-bottom: 1px solid #eaeaea;
-}
-.hero-section h1 {
-    font-weight: 700;
-    color: #2c3e50;
 }
 
 /* 章节通用样式 */
@@ -37,11 +42,9 @@ body {
     display: inline-block;
     padding-bottom: 10px;
 }
+
 section {
     padding: 60px 0;
-}
-.bg-light-gray {
-    background-color: #f8f9fa;
 }
 
 /* 卡片样式 */
@@ -50,28 +53,18 @@ section {
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     transition: transform 0.3s;
 }
+
 .card:hover {
     transform: translateY(-5px);
 }
 
-/* 底部区域 */
+/* 底部区域 - 直接修改原有类 */
 footer {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    padding: 30px 0;
-}
-/* 学术蓝专属背景 - 强制覆盖版 */
-.bg-academic-blue {
-    background-color: #003366 !important; /* 经典的深海军蓝 */
-    color: #ffffff !important;
+    background-color: var(--academic-blue) !important; /* 强制使用学术蓝 */
+    color: #ffffff;
+    padding: 50px 0;
 }
 
-/* 导航栏链接在深蓝底色下的文字颜色 */
-.bg-academic-blue .nav-link {
-    color: rgba(255,255,255,0.8) !important;
-}
-
-.bg-academic-blue .nav-link.active, 
-.bg-academic-blue .nav-link:hover {
-    color: #ffffff !important;
+footer a {
+    color: #3498db;
 }
