@@ -1,34 +1,48 @@
-/* style.css */
+/* =========================================
+   Safe AI Team - 全局样式表 (最终稳定版)
+   ========================================= */
+
+/* 1. 基础设置与平滑滚动 */
+html { 
+    scroll-behavior: smooth; /* 恢复点击导航栏平滑滚动到对应模块 */
+}
+
 body {
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     color: #333;
-    padding-top: 76px; 
+    padding-top: 76px; /* 重要：防止导航栏遮挡顶部内容 */
 }
 
-/* 顶部导航栏 - 强制背景色 */
+/* =========================================
+   2. 导航栏 (学术蓝 + 确保可点击)
+   ========================================= */
 .navbar {
-    background-color: #003366 !important; /* 直接使用学术蓝色号 */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #003366 !important; /* 学术蓝 */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+    z-index: 1030 !important; /* 核心修复：确保导航栏永远在最顶层，不被挡住 */
 }
 
 .navbar-brand, .nav-link {
     color: #ffffff !important;
+    font-weight: 500;
+    transition: all 0.3s ease; /* 恢复导航栏选项的动态渐变感 */
 }
 
-.nav-link:hover {
+.nav-link:hover, .nav-link.active {
     color: #3498db !important;
-    background-color: rgba(255,255,255,0.1);
-    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 5px;
 }
 
-/* 头部大图区域 (Hero) */
+/* =========================================
+   3. 模块标题与卡片动态感 (悬停浮起特效)
+   ========================================= */
 .hero-section {
     background-color: #f8f9fa;
     padding: 80px 0;
     border-bottom: 1px solid #eaeaea;
 }
 
-/* 章节标题 */
 .section-title {
     margin-bottom: 40px;
     font-weight: 600;
@@ -38,35 +52,52 @@ body {
     padding-bottom: 10px;
 }
 
-section {
-    padding: 60px 0;
+/* 核心修复：恢复卡片的呼吸动态感 */
+.transition-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff;
 }
 
-/* 卡片 */
-.card {
-    border: none;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
-}
-.card:hover { transform: translateY(-5px); }
-
-/* 底部区域 - 强制背景色 */
-footer#join {
-    background-color: #003366 !important; /* 直接使用学术蓝色号 */
-    color: #ffffff !important;
-    padding: 50px 0;
+.transition-hover:hover {
+    transform: translateY(-8px); /* 鼠标放上去时上浮 */
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15) !important; /* 加深阴影 */
 }
 
-footer#join a { color: #3498db !important; }
+/* =========================================
+   4. 学术成果列表 (交互效果)
+   ========================================= */
+.pub-item { 
+    transition: all 0.2s ease; 
+}
 
-/* 论文列表样式 */
-.pub-item { transition: all 0.2s ease; }
 .pub-item:hover {
-    background-color: rgba(0, 51, 102, 0.02);
-    padding-left: 10px;
+    background-color: rgba(0, 51, 102, 0.03); /* 鼠标滑过论文时出现极淡的蓝色背景 */
+    padding-left: 10px; /* 微微向右缩进 */
 }
+
 .pub-links .btn {
     font-size: 0.8rem;
     padding: 0.2rem 0.8rem;
     font-weight: 500;
+}
+
+/* =========================================
+   5. 页脚 (学术蓝)
+   ========================================= */
+footer#join {
+    background-color: #003366 !important;
+    color: #ffffff !important;
+}
+
+footer#join p.text-muted, footer#join span {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+footer#join a {
+    color: #3498db !important;
+    text-decoration: none !important;
+}
+
+footer#join a:hover {
+    text-decoration: underline !important;
 }
