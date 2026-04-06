@@ -5,14 +5,9 @@ body {
     padding-top: 76px; 
 }
 
-/* --- 核心修改：学术蓝全局定义 --- */
-:root {
-    --academic-blue: #003366; /* 在这里定义一次，全站生效 */
-}
-
-/* 顶部导航栏 - 直接修改原有类 */
+/* 顶部导航栏 - 强制背景色 */
 .navbar {
-    background-color: var(--academic-blue) !important; /* 强制使用学术蓝 */
+    background-color: #003366 !important; /* 直接使用学术蓝色号 */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -22,7 +17,7 @@ body {
 
 .nav-link:hover {
     color: #3498db !important;
-    background-color: rgba(255,255,255,0.1); /* 增加一个微弱的悬停背景感 */
+    background-color: rgba(255,255,255,0.1);
     border-radius: 4px;
 }
 
@@ -33,7 +28,7 @@ body {
     border-bottom: 1px solid #eaeaea;
 }
 
-/* 章节通用样式 */
+/* 章节标题 */
 .section-title {
     margin-bottom: 40px;
     font-weight: 600;
@@ -47,33 +42,28 @@ section {
     padding: 60px 0;
 }
 
-/* 卡片样式 */
+/* 卡片 */
 .card {
     border: none;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     transition: transform 0.3s;
 }
+.card:hover { transform: translateY(-5px); }
 
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* 底部区域 - 直接修改原有类 */
-footer {
-    background-color: var(--academic-blue) !important; /* 强制使用学术蓝 */
-    color: #ffffff;
+/* 底部区域 - 强制背景色 */
+footer#join {
+    background-color: #003366 !important; /* 直接使用学术蓝色号 */
+    color: #ffffff !important;
     padding: 50px 0;
 }
 
-footer a {
-    color: #3498db;
-}
-.pub-item {
-    transition: all 0.2s ease;
-}
+footer#join a { color: #3498db !important; }
+
+/* 论文列表样式 */
+.pub-item { transition: all 0.2s ease; }
 .pub-item:hover {
-    background-color: rgba(0, 51, 102, 0.02); /* 悬停时有一点点学术蓝底色 */
-    padding-left: 10px; /* 悬停时轻轻右移 */
+    background-color: rgba(0, 51, 102, 0.02);
+    padding-left: 10px;
 }
 .pub-links .btn {
     font-size: 0.8rem;
