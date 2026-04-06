@@ -2,15 +2,19 @@
    Safe AI Team - 全局样式表 (最终稳定版)
    ========================================= */
 
-/* 1. 基础设置与平滑滚动 */
-html { 
-    scroll-behavior: smooth; /* 恢复点击导航栏平滑滚动到对应模块 */
+/* 恢复导航栏选项的动态渐变感 */
+nav#mainNav .nav-link {
+    color: rgba(255, 255, 255, 0.7) !important; /* 默认状态稍微暗一点 */
+    transition: all 0.3s ease; 
 }
 
-body {
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    color: #333;
-    padding-top: 76px; /* 重要：防止导航栏遮挡顶部内容 */
+/* 核心修复：鼠标悬停 与 滚动到当前模块时的高亮状态 */
+nav#mainNav .nav-link:hover, 
+nav#mainNav .nav-link.active {
+    color: #ffffff !important; /* 激活时变成纯白 */
+    font-weight: bold !important;
+    background-color: rgba(255, 255, 255, 0.15) !important; /* 背景出现高亮块 */
+    border-radius: 6px !important;
 }
 
 /* =========================================
