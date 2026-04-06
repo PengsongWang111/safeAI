@@ -32,20 +32,65 @@
             <h1 class="display-4 fw-bold">安全人工智能团队</h1>
             <h2 class="h4 text-muted mt-3 mb-4">Safe Artificial Intelligence Team @ Hefei University</h2>
             <p class="lead w-75 mx-auto" style="text-align: justify; line-height: 1.8;">
-                由吴志泽院长指导，依托于合肥大学人工智能与大数据学院。我们致力于推进前沿的深度学习与安全人工智能技术，旨在构建鲁棒、可信、泛化能力强的多模态 AI 系统。
+                  由吴志泽院长指导，依托于合肥大学人工智能与大数据学院。我们致力于推进前沿的深度学习与安全人工智能技术，旨在构建鲁棒、可信、泛化能力强的多模态 AI 系统。
                 团队深耕对抗机器学习、域适应等核心领域，力求在真实的动态视觉场景中，解决模型面临的安全挑战与分布偏移难题，为可信 AI 的落地应用提供坚实的理论与算法支撑。
             </p>
             <a href="#join" class="btn btn-primary btn-lg mt-4 shadow-sm">加入我们</a>
         </div>
     </header>
 
-    <section id="news" class="container py-5">
-        <h2 class="section-title mb-4">📌 最新动态 (News)</h2>
-        <ul class="list-group list-group-flush fs-5 mt-2">
-            <li class="list-group-item"><strong>[2026.03]</strong> 团队启动了针对多任务领域泛化 (MTDG) 的新型架构与实验基准建设工作。</li>
-            <li class="list-group-item"><strong>[2026.02]</strong> 成功复现并推进了 TASAR、SVAttack 等骨骼动作识别的对抗攻击算法验证。</li>
-            <li class="list-group-item"><strong>[2025.07]</strong> 论文 <i>Split-and-Combine</i> 被 <strong>ICCV 2025</strong> 录用。</li>
-        </ul>
+<section id="news" class="container py-5">
+        <h2 class="section-title mb-5">📌 最新动态 (News)</h2>
+        
+        <div class="row g-5 align-items-center mb-5 pb-4 border-bottom">
+            <div class="col-md-5">
+                <div class="position-relative">
+                    <img src="assets/images/nrfp-framework.png" alt="NRFP Framework" class="img-fluid rounded-3 shadow-lg transition-hover">
+                    <div class="position-absolute top-0 start-0 m-3">
+                        <span class="badge bg-danger shadow">🔥 New! CVPR 2026</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <h3 class="fw-bold text-dark mb-3">团队在域适应领域取得重大突破，论文 NRFP 被 CVPR 2026 录用</h3>
+                <p class="text-muted lh-lg" style="text-align: justify;">
+                    <strong>[2026.03]</strong> 我们的研究工作 <i>"NRFP: Non-asymmetric Residual Feature Projection for Cross-Domain Analysis"</i> 正式被计算机视觉顶会 <strong>CVPR 2026</strong> 录用。该论文提出了一种创新的非对称残差特征投影架构，显式建模了源域与目标域之间的分布漂移，为解决复杂动态场景下的域偏移问题提供了全新的理论视角。
+                </p>
+                <div class="mt-3">
+                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle p-2 px-3 me-2">域适应 (DA)</span>
+                    <span class="badge bg-light text-dark border p-2 px-3">特征投影</span>
+                </div>
+                <div class="mt-4">
+                    <a href="#" class="btn btn-sm btn-primary rounded-pill px-4 me-2 shadow-sm">Project Page</a>
+                    <a href="#" class="btn btn-sm btn-outline-dark rounded-pill px-4">Abstract</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5 align-items-center flex-md-row-reverse mb-4">
+            <div class="col-md-5">
+                <img src="assets/images/skeleton-attack.png" alt="Skeleton Attack Framework" class="img-fluid rounded-3 shadow-lg transition-hover">
+            </div>
+            <div class="col-md-7">
+                <h3 class="fw-bold text-dark mb-3">面向骨架动作识别的对抗攻击框架实现跨架构突破</h3>
+                <p class="text-muted lh-lg" style="text-align: justify;">
+                    <strong>[2026.02]</strong> 团队在 AI 安全方向发布了最新的骨架对抗攻击研究成果。该框架通过注入结构化时空扰动，成功实现了在 ST-GCN、CTR-GCN 等主流架构间的高迁移性攻击。实验证明，该方法能显著探测出当前动作识别模型的安全边界，为构建更加鲁棒、可信的视觉感知系统奠定了基础。
+                </p>
+                <div class="mt-3">
+                    <span class="badge bg-danger-subtle text-danger border border-danger-subtle p-2 px-3 me-2">AI 安全</span>
+                    <span class="badge bg-light text-dark border p-2 px-3">对抗机器学习</span>
+                </div>
+                <div class="mt-4">
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-4">Code Available</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 pt-3 border-top">
+            <ul class="list-unstyled small text-secondary">
+                <li>● [2025.07] 团队关于单域泛化的研究论文被 <strong>ICCV 2025</strong> 录用并受邀参加展示。</li>
+            </ul>
+        </div>
     </section>
 
     <section id="research" class="py-5" style="background-color: #f8f9fa;">
