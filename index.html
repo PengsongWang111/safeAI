@@ -161,7 +161,7 @@
         </div>
     </header>
 
-    <section id="news" class="container py-5 reveal-up">
+  <section id="news" class="container py-5 reveal-up">
         <h2 class="section-title">📌 最新动态 (News)</h2>
         
         <div class="row g-5 align-items-center mb-5 pb-4 border-bottom">
@@ -174,39 +174,46 @@
                 </div>
             </div>
             <div class="col-md-7">
-                <h3 class="fw-bold text-dark mb-3">团队在域适应领域取得重大突破，论文 NRFP 被 CVPR 2026 录用</h3>
+                <h3 class="fw-bold text-dark mb-3">无源域适应领域取得重大突破，论文 NRFP 被 CVPR 2026 录用</h3>
                 <p class="text-secondary lh-lg text-start">
-                    <strong>[2026.03]</strong> 我们的研究工作 <i>"NRFP: Non-asymmetric Residual Feature Projection for Cross-Domain Analysis"</i> 正式被计算机视觉顶会 <strong>CVPR 2026</strong> 录用。该论文提出了一种创新的非对称残差特征投影架构，显式建模了源域与目标域之间的分布漂移。
+                    <strong>[2026.03]</strong> 团队最新研究工作 <i>"NRFP: A Noise-Robust Feature Plugin for Source-Free Domain Adaptation"</i> 正式被计算机视觉顶级会议 <strong>CVPR 2026 (CCF-A类)</strong> 录用。该研究聚焦无源域适应（SFDA）中“数据增强诱发噪声”的痛点，创新性地提出了一种即插即用的噪声鲁棒特征插件。通过引入双效机制（AIGC 纯净先验 ASGS 与特征级对抗互斥 MESGS），成功强制模型剥离表面干扰、提取内在语义，在多项主流基准测试中全面刷新了 SOTA 性能。
                 </p>
                 <div class="mt-3">
-                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle p-2 px-3 me-2">域适应 (DA)</span>
-                    <span class="badge bg-light text-dark border p-2 px-3">特征投影</span>
+                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle p-2 px-3 me-2">无源域适应 (SFDA)</span>
+                    <span class="badge bg-light text-dark border p-2 px-3">特征提取</span>
                 </div>
                 <div class="mt-4">
                     <a href="#" class="btn btn-sm btn-primary rounded-pill px-4 me-2 shadow-sm">Project Page</a>
-                    <a href="#" class="btn btn-sm btn-outline-dark rounded-pill px-4">Abstract</a>
+                    <a href="#" class="btn btn-sm btn-outline-dark rounded-pill px-4">PPT 汇报</a>
                 </div>
             </div>
         </div>
 
         <div class="row g-5 align-items-center flex-md-row-reverse mb-4">
             <div class="col-md-5">
-                <img src="assets/images/skeleton-attack.png" alt="Skeleton Attack Framework" class="img-fluid rounded-4 shadow">
+                <div class="position-relative">
+                    <img src="assets/images/skeleton-attack.png" alt="SVAttack Framework" class="img-fluid rounded-4 shadow">
+                    <div class="position-absolute top-0 start-0 m-3">
+                        <span class="badge bg-secondary shadow px-3 py-2 rounded-pill">📝 Under Review</span>
+                    </div>
+                </div>
             </div>
             <div class="col-md-7">
-                <h3 class="fw-bold text-dark mb-3">面向骨架动作识别的对抗攻击框架实现跨架构突破</h3>
+                <h3 class="fw-bold text-dark mb-3">安全 AI 领域新进展：面向图卷积骨架动作识别的空间视点转移攻击研究</h3>
                 <p class="text-secondary lh-lg text-start">
-                    <strong>[2026.02]</strong> 团队在 AI 安全方向发布最新成果。框架通过注入结构化时空扰动，成功实现了在 ST-GCN、CTR-GCN 等主流架构间的高迁移性攻击，显著探测出模型的安全边界。
+                    <strong>[2026.02]</strong> 团队在安全人工智能方向取得最新进展，完成研究论文 <i>"Spatial Viewpoint Shift Attack on Graph Convolutional Skeleton Action Recognition"</i>（目前正在审稿中）。该研究深入探讨了限制基于骨架模型对抗迁移性的架构归纳偏差问题。团队提出了一种空间梯度阻尼器与基于视点的约束机制，在保持视觉上合理的骨骼运动的同时，显著增强了对抗样本在不同 GCN 架构间的可迁移性。相关代码已开源。
                 </p>
                 <div class="mt-3">
                     <span class="badge bg-danger-subtle text-danger border border-danger-subtle p-2 px-3 me-2">AI 安全</span>
-                    <span class="badge bg-light text-dark border p-2 px-3">对抗机器学习</span>
+                    <span class="badge bg-light text-dark border p-2 px-3">图卷积网络 (GCN)</span>
+                    <span class="badge bg-light text-dark border p-2 px-3">对抗攻击</span>
                 </div>
                 <div class="mt-4">
-                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-4">Code Available</a>
+                    <a href="https://github.com/MilkyWay123123/SVAttack" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill px-4">🔗 GitHub Code</a>
                 </div>
             </div>
         </div>
+    </section>
     </section>
 
     <section id="research" class="py-5 bg-light">
